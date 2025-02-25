@@ -1,18 +1,9 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anuar 2025 portfolio</title>
-  <style>
-  .fixed {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: lightblue;
-    padding: 10px;
-    border: 1px solid blue;
-  }
-</style>
+  <title id="pageTitle">Anuar 2025 Portfolio</title>
   <style>
   .static {
     position: static;
@@ -21,44 +12,110 @@
     background-color: pale green;
     padding: 10px;
   }
-</style>
+  </style>
 </head>
 <body>
-  <h1>
-    Anuar 2025 Porfolio
-  </h1>
+
+  <h1 id="title">Anuar 2025 Portfolio</h1>
+
   <div class="static">
     <table>
       <th>
-        <a href="asdasd1.html">Contact</a>
+        <a href="asdasd1.html" id="contactLink">Contact</a>
       </th>
       <th>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUQbmV2ZXIgZ29ubmEgZ2l2ZQ%3D%3D">Free Money</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUQbmV2ZXIgZ29ubmEgZ2l2ZQ%3D%3D" id="freeMoneyLink">Free Money</a>
       </th>
       <th>
-        <a href="https://astanaboysbil.edupage.org/">My school</a> 
+        <a href="https://astanaboysbil.edupage.org/" id="schoolLink">My school</a>
       </th>
     </table>
   </div> 
-  <h1>Info</h1>
+
+  <h1 id="infoTitle">Info</h1>
   <ul>
-    <li>Sigma</li>
-    <li>10th grader</li>
-    <li>BIL</li>
+    <li id="sigma">Sigma</li>
+    <li id="grade">10th grader</li>
+    <li id="school">BIL</li>
   </ul>
   <ol>
-    <li>olympiad chetotam mesta kakieto</li>
-    <li>prosto sigma</li>
-    <li>dota 2 4000 mmr</li>
+    <li id="olympiad">Olympiad chetotam mesta kakieto</li>
+    <li id="sigmaHobby">Prosto sigma</li>
+    <li id="dota">Dota 2 4000 MMR</li>
   </ol>
+
   <table>
-    <th>Name</th>
-    <th>Age</th>
-    <th>interest</th>
+    <th id="nameHeader">Name</th>
+    <th id="ageHeader">Age</th>
+    <th id="interestHeader">Interest</th>
     <tr>
       <td>Anuar</td>
       <td>16</td>
       <td>IT</td>
     </tr>
   </table>
+
+  <div class="language-switcher">
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('ru')">Русский</button>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "Anuar 2025 Portfolio",
+        title: "Anuar 2025 Portfolio",
+        contactLink: "Contact",
+        freeMoneyLink: "Free Money",
+        schoolLink: "My school",
+        infoTitle: "Info",
+        sigma: "Sigma",
+        grade: "10th grader",
+        school: "BIL",
+        olympiad: "Olympiad chetotam mesta kakieto",
+        sigmaHobby: "Prosto sigma",
+        dota: "Dota 2 4000 MMR",
+        nameHeader: "Name",
+        ageHeader: "Age",
+        interestHeader: "Interest"
+      },
+      ru: {
+        pageTitle: "Портфолио Ануара 2025",
+        title: "Портфолио Ануара 2025",
+        contactLink: "Контакты",
+        freeMoneyLink: "Бесплатные деньги",
+        schoolLink: "Моя школа",
+        infoTitle: "Информация",
+        sigma: "Сигма",
+        grade: "10 класс",
+        school: "BIL",
+        olympiad: "Олимпиада, что-то там, места какие-то",
+        sigmaHobby: "Просто сигма",
+        dota: "Dota 2 4000 MMR",
+        nameHeader: "Имя",
+        ageHeader: "Возраст",
+        interestHeader: "Интерес"
+      }
+    };
+
+    function switchLanguage(language) {
+      document.getElementById('pageTitle').innerText = translations[language].pageTitle;
+      document.getElementById('title').innerText = translations[language].title;
+      document.getElementById('contactLink').innerText = translations[language].contactLink;
+      document.getElementById('freeMoneyLink').innerText = translations[language].freeMoneyLink;
+      document.getElementById('schoolLink').innerText = translations[language].schoolLink;
+      document.getElementById('infoTitle').innerText = translations[language].infoTitle;
+      document.getElementById('sigma').innerText = translations[language].sigma;
+      document.getElementById('grade').innerText = translations[language].grade;
+      document.getElementById('school').innerText = translations[language].school;
+      document.getElementById('olympiad').innerText = translations[language].olympiad;
+      document.getElementById('sigmaHobby').innerText = translations[language].sigmaHobby;
+      document.getElementById('dota').innerText = translations[language].dota;
+      document.getElementById('nameHeader').innerText = translations[language].nameHeader;
+      document.getElementById('ageHeader').innerText = translations[language].ageHeader;
+      document.getElementById('interestHeader').innerText = translations[language].interestHeader;
+    }
+  </script>
+
 </body>
+</html>
